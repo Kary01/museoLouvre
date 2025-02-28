@@ -6,7 +6,9 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: 'Open Sans', sans-serif; /*especifico el nombre y familia de la tipografia a usar*/
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-style: normal;
 }
 html {
   scroll-behavior: smooth; /*para desplazarse "scrolear" suavemente dentro de la página al presionar un enlace*/
@@ -19,8 +21,8 @@ html {
 /**********************************/
 header {/*caracteristicas elementos dentro del header de la pagina*/
 	font-size: 24px; /*tamaño de las fuentes que aprecen en el header*/
-  	background-color: white;  /*color fondo encabezado*/
-    height: 130px;  /* altura del encabezado, equivale a 5.5em*/
+  	background-color: #191717;  /*color fondo encabezado*/
+    height: 180px;  /* altura del encabezado, equivale a 5.5em*/
     padding-left: 10%; /*hago un espacio a la izquierda al interior del contenedor header de 10% del ancho del viewport*/
     padding-right: 10%; /*hago un espacio a la derecha al interior del contenedor header de 10% del ancho del viewport*/
   	box-shadow: 0px 1px 8px grey; /*efecto de material con sombreado sobre el fondo*/
@@ -28,7 +30,8 @@ header {/*caracteristicas elementos dentro del header de la pagina*/
 }
 @media screen and (max-width: 700px) {
 header {
-	height: 260px;  /* altura del encabezado, equivale a 5.5em*/
+	padding: 10px;
+	height: 300px;
 	}
 }
 .menu-container {/*caracteristicas elementos en contenedor con la clase menu-container*/
@@ -38,6 +41,7 @@ header {
 }
 .identificador {/*caracteristicas elementos en contenedor con la clase identificador*/
   	/*border: 5px solid #222;  /* For debugging */
+	padding: 10px;
   	width: 100%; /*ancho que tendra el contenedor con clase menu*/
   	display: flex; /*sera un elemento/item de tipo flex*/
   	justify-content: center; /*defino la alineación horizontal de los items hijos al centro*/
@@ -54,7 +58,7 @@ header {
 	cuando hay mas de uno distribuya el esapcio restante entre los espacios de cada elemento/item*/
 }
 .ligas-secciones a{/*caracteristicas elementos tipo enlace dentro del contenedor con clase secciones*/
-	color: grey; /*color que tendran las fuentes de los enlaces*/
+	color: #ccc8aa; /*color que tendran las fuentes de los enlaces*/
 	text-decoration: none; /*le quito decoraciones a los enlaces, saeln sin subrayar ahora*/
   	font-weight: bold; /*tipo de letra bold*/
  	margin-top: 10px;
@@ -86,6 +90,7 @@ header {
   	display: flex; /*tipo de layout felxbox*/
   	flex-direction: column; /*rederizara/dibujara los items/elementos hijos en el layout 
   	como una columna, un contenedor o un item sobre el otro */
+	margin: 20px 0 20px 0;
   	padding-left: 10%; /*hago un espacio a la izquierda al interior del contenedor header de 10% del ancho del viewport*/
     padding-right: 10%; /*hago un espacio a la derecha al interior del contenedor header de 10% del ancho del viewport*/
 }
@@ -93,16 +98,25 @@ header {
 	display: flex; /*sera un elemento/item de tipo flex*/
 	flex-direction: column; /*rederizara/dibujara los items/elementos hijos en el layout 
   	como una columna, un contenedor o un item sobre el otro */
+	padding-bottom: 40px;
 }
 .texto-secc h1{
 	display: flex; /*sera un elemento/item de tipo flex*/
 	justify-content: center; /*defino la alineación horizontal de los items hijos al centro*/
-	margin-top: 25px;
+	margin: 45px 0 25px 0;
+	color: #7d7c7c;
+	font-weight: 800;
+	font-size: 40px;
 }
 .texto-secc p{
 	font-size: 18pt;
 	display: flex; /*sera un elemento/item de tipo flex*/
 	margin-top: 10px;
+	text-align: justify;
+	font-size: 20px;
+}
+li::marker {
+	color: #ccc8aa;
 }
 .contenedor-imagen {
   	display: flex; /*sera un elemento/item de tipo flex*/
@@ -116,7 +130,7 @@ header {
 }
 .par-imgs-escritorio{/*caracteristicas elementos en contenedor con la clase secciones*/
 	/*border: 5px solid #555;  /* For debugging */
-	width: 65%; /*ancho que tendra el contenedor con clase menu*/
+	width: 85%; /*ancho que tendra el contenedor con clase menu*/
 	display: flex; /*sera un elemento/item de tipo flex*/
 	justify-content: space-around; /*defino la alineación horizontal de los items hijos diciendo
 	cuando hay mas de uno distribuya el esapcio restante entre los espacios de cada elemento/item*/

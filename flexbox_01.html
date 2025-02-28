@@ -11,7 +11,11 @@ la estructura que se llenara como se menciona a continuación...-->
 <!--dentro de la etiqueta head esta el encabezado del documento html-->
 <head> 
 	<title>Museo de Louvre</title> <!--dentro de la etiqueta tittle esta el titulo de la página-->
+	<link rel="shortcut icon" href="imagenes/logo.png" type="image/x-icon">
 	<link rel='stylesheet' href='estilos.css'/> <!--dentro de esta etiqueta esta la referencia a la hoja de estilos-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!--viewport para trabajar responsive design-->
 </head>
 
@@ -25,7 +29,11 @@ la estructura que se llenara como se menciona a continuación...-->
 
       <div class='identificador'>
         <!----modificar nombre y ruta de la imagen para cambiar el logo por el propio----->
-       <img src="imagenes/logo.png">
+		<picture>
+			<source srcset="imagenes/logo.png" media="(min-width: 1024px)">
+			<source srcset="imagenes/logo.png" media="(min-width: 700px)">
+			<img src="imagenes/logo.png">
+		   </picture>
       </div>
 
       <div class='ligas-secciones'>
@@ -58,22 +66,12 @@ la estructura que se llenara como se menciona a continuación...-->
     			<!--contenedor con las dos imagenes en su version de escritorio-->
     			<div class="par-imgs-escritorio">
     				<!--si se quiere modificar contenido susutituir la imagen a la que referencia la etiqueta img-->
-	        		<img src="imagenes/img1a.png" title="Img 1a">
-	        		<img src="imagenes/img1b.png" title="Img 1b">
+	        		<img src="imagenes/poster.png" title="Img 1a">
     			</div>
-    			<!--contenedor los dos textos de las dos imagenes en su version de escritorio-->
-    			<div class="par-imgs-escritorio">
-    				<!--texto para imagen a la izquierda-->
-	        		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	        		<!--texto para imagen a la derecha-->
-	        		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        		</div>
         		<!--contenedor con las dos imagenes en su version mobile-->
         		<div class="par-imgs-mobile">
     				<!--si se quiere modificar contenido susutituir la imagen a la que referencia la etiqueta img-->
-	        		<img src="imagenes/img1a.png" title="Img 1a">
-	        		<!--si se quiere modificar contenido susutituir la imagen a la que referencia la etiqueta img-->
-	        		<img src="imagenes/img1b.png" title="Img 1b">
+	        		<img src="imagenes/poster.png" title="Img 1a">
     			</div>
     		</div>
 
@@ -86,16 +84,19 @@ la estructura que se llenara como se menciona a continuación...-->
     			<!--si se quiere modificar contenido susutituir el texto entre las etiquetas de texto tipo h1-->
 		        <h1>Ponentes</h1>
 		        <!--si se quiere modificar contenido susutituir el texto entre las etiquetas de parrafo-->
-		        <p>Conoce a los artistas, historiadores y expertos que darán vida al festival. Nuestros ponentes incluyen a:</p>
+				<p>Aprende de sus experiencias, participa en debates apasionantes y descubre nuevas perspectivas sobre el arte y su impacto en el mundo.</p>
+				<p>Conoce a los artistas, historiadores y expertos que darán vida al festival. Nuestros ponentes incluyen a:</p>
+				<br>
+				<br>
+		        <br><!--etiqueta para un brinco de renglón-->
 				<br>
 					<ul>
-						<li>[Nombre del ponente 1]: [Breve descripción]</li>
-						<li>[Nombre del ponente 1]: [Breve descripción]</li>
-						<li>[Nombre del ponente 1]: [Breve descripción]</li>
+						<li>Jorgue Guerra: Nobleza Negra y Poderes Ocultos.</li>
+						<li>Antony Cyril Sutton: La trilogía de Wall Street.</li>
+						<li>Marcelo Gullo: La Insubordinación Fundante.</li>
+						<li>Juan Miguel Zunzunegui: Locura y Razón.</li>
 					</ul>
 				<br>
-				<p>Aprende de sus experiencias, participa en debates apasionantes y descubre nuevas perspectivas sobre el arte y su impacto en el mundo.</p>
-		        <br><!--etiqueta para un brinco de renglón-->
     		</div>
     		<!--contenedor para las imagenes de la sección 1, OJO: este tiene un layout para dos imagenes-->
     		<div class="imgs-secc-1">
@@ -126,9 +127,9 @@ la estructura que se llenara como se menciona a continuación...-->
 		        <p>Disfruta de una selección de películas que celebran el arte y la creatividad. Desde documentales sobre la historia del Louvre hasta ficciones inspiradas en sus obras maestras, nuestra programación cinematográfica te llevará a un viaje visual inolvidable.</p>
 				<br>
 					<ul>
-						<li>Película 1</li>
-						<li>Película 2</li>
-						<li>Película 3</li>
+						<li>Documental Zeitgesit</li>
+						<li>Documental The Money Masters/Los Amos del Dinero (1996) - Historia de los bancos centrales</li>
+						<li>Land Of The Blind (2006)</li>
 					</ul>
 		        <br><!--etiqueta para un brinco de renglón-->
     		</div>
@@ -160,9 +161,10 @@ la estructura que se llenara como se menciona a continuación...-->
 		        <p>Explora una selección de libros que profundizan en las obras y los artistas que encontrarás en el Louvre. Desde catálogos de exposiciones hasta biografías de grandes maestros, nuestra colección te invita a expandir tus conocimientos y a descubrir nuevas historias fascinantes.</p>
 				<br>
 					<ul>
-						<li>Libro 1</li>
-						<li>Libro 2</li>
-						<li>Libro 3</li>
+						<li>1984 de George Orwell</li>
+						<li>Un Mundo feliz de Aldous Huxley</li>
+						<li>The Rape of the Mind: The Psychology of Though de Joost Meerloo</li>
+						<li>Confesiones de un sicario económico de John Perkins</li>
 					</ul>
 		        <br><!--etiqueta para un brinco de renglón-->
     		</div>
