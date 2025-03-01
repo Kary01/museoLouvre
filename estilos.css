@@ -48,7 +48,7 @@ header {
 }
 .identificador img{/*caracteristicas imagen identificadora dentro del contenedor con clase identificador*/
 	margin-top: 15px; /*un margen arriba de 15 px*/
-    height: 54.61px; /*ancho que tendra la imagen identificadora*/
+    height: 70px; /*ancho que tendra la imagen identificadora*/
 }
 .ligas-secciones{/*caracteristicas elementos en contenedor con la clase secciones*/
 	/*border: 5px solid #555;  /* For debugging */
@@ -115,6 +115,10 @@ header {
 	text-align: justify;
 	font-size: 20px;
 }
+ul {
+	margin: 10px 0;
+}
+
 li::marker {
 	color: #ccc8aa;
 }
@@ -132,12 +136,16 @@ li::marker {
 	/*border: 5px solid #555;  /* For debugging */
 	width: 85%; /*ancho que tendra el contenedor con clase menu*/
 	display: flex; /*sera un elemento/item de tipo flex*/
-	justify-content: space-around; /*defino la alineación horizontal de los items hijos diciendo
+	justify-content:center; /*defino la alineación horizontal de los items hijos diciendo
 	cuando hay mas de uno distribuya el esapcio restante entre los espacios de cada elemento/item*/
 }
 .par-imgs-escritorio img{
 	width: 50%;
 	display: flex; /*sera un elemento/item de tipo flex*/
+	margin: 20px 0;
+}
+.par-imgs-escritorio a{
+	display: contents; /*sera un elemento/item de tipo flex*/
 }
 .par-imgs-escritorio img:hover{
   transform: scale(1.03);
@@ -155,6 +163,10 @@ li::marker {
 }
 .par-imgs-mobile img{
 	display: none;
+	margin-top: 20px;
+}
+.par-imgs-mobile img a{
+	display: contents;
 }
 .par-imgs-mobile p{
 	display: none;
@@ -271,7 +283,7 @@ li::marker {
 /*estilos para footer de la página*/
 /**********************************/
 footer {
-  	background-color: white;/*color fondo pie de pagina*/
+  	background-color: #191717;/*color fondo pie de pagina*/
   	margin-top: 40px;
   	box-shadow: 0px 1px 8px grey;
   	display: flex; /*sera un elemento/item de tipo flex*/
@@ -289,10 +301,11 @@ footer {
 	margin-right: 35px;
 }
 .copyright{
-	font-size: 17pt;
+	font-size: 15px;
 	text-align: center;
 	margin-top: 49px;
 	margin-bottom: 95px;
+	color: #ccc8aa;
 }
 /**media query cuando ancho es menor o igual a 700px**/
 @media screen and (max-width: 700px){
@@ -321,7 +334,7 @@ footer {
 .ir-arriba {
   	display: flex; /*sera un elemento/item de tipo flex*/
   	flex-direction: column;
-  	align-items: center; 
+  	align-items: end; 
 }
 .ir-arriba img{
   	height: 60px;
